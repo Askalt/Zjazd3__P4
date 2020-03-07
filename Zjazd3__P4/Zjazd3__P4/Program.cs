@@ -11,7 +11,8 @@ namespace Zjazd3__P4
             using var connection = new SqlConnection(connString);
             var db = new DB();
             db.Select(connection);
-           db.Insert(connection, 303, "RegionZ");
+           db.Insert(connection, 306, "RegionZ");
+            db.Insert(connection, 304, "RegionZ");
         }
     }
 }
