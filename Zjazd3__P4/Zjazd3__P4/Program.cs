@@ -11,8 +11,7 @@ namespace Zjazd3__P4
             using var connection = new SqlConnection(connString);
             connection.Open();
             var db = new DB();
-
-            //db.Insert(connection, 301, "Wuhan");
+            //db.Insert(connection, 301, "Mali");
             db.Delete(connection, db.Select(connection));
             connection.Close();
         }
