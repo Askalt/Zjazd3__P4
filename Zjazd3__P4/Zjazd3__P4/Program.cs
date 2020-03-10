@@ -9,10 +9,12 @@ namespace Zjazd3__P4
         {
             var connString = @"Data Source=DESKTOP-MPTGS57\SQLEXPRESS;Initial Catalog=ZNorthwind;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             using var connection = new SqlConnection(connString);
+            connection.Open();
             var db = new DB();
-            db.Select(connection);
-           db.Insert(connection, 306, "RegionZ");
-            db.Insert(connection, 304, "RegionZ");
+
+            //db.Insert(connection, 301, "Wuhan");
+            db.Delete(connection, db.Select(connection));
+            connection.Close();
         }
     }
 }
